@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escape do Labirinto</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<main>
+    <!-- Tag principal para agrupar o conteúdo do jogo. -->
+    <body>
+        <!-- Corpo do documento HTML. -->
+
+        <h1>Escape do Labirinto</h1>
+        <!-- Título principal do jogo. -->
+        <p>Use as teclas <strong>W, A, S, D</strong> para mover o jogador. Complete as 4 fases para vencer!</p>
+        <!-- Instruções básicas do jogo. -->
+
+        <!-- Primeira Fase -->
+        <div class="fase fase1" id="fase1">
+            <!-- Container da primeira fase, identificado com classe e ID. -->
+            <div id="jogador"></div>
+            <!-- Div representando o jogador, que será controlado pelo usuário. -->
+            <div class="parede" style="top: 50px; left: 100px;"></div>
+            <!-- Parede com posição e dimensões definidas no atributo `style`. -->
+            <div class="parede" style="top: 50px; left: 200px; width: 150px;"></div>
+            <div class="parede" style="top: 150px; left: 50px; height: 40px;"></div>
+            <div class="parede" style="top: 200px; left: 300px; width: 100px;"></div>
+            <div class="parede" style="top: 300px; left: 400px; height: 40px;"></div>
+            <div class="parede" style="top: 350px; left: 150px; width: 150px;"></div>
+            <div class="parede" style="top: 400px; left: 50px;"></div>
+            <!-- Parede adicional para definir o layout do labirinto. -->
+            <div id="saida"></div>
+            <!-- Div que representa a saída da fase. -->
+        </div>
+
+        <!-- Segunda Fase -->
+        <div class="fase fase2" id="fase2">
+            <!-- Container para a segunda fase, com configuração similar à primeira. -->
+            <div id="jogador"></div>
+            <div class="parede" style="top: 50px; left: 100px; width: 120px;"></div>
+            <div class="parede" style="top: 80px; left: 250px; height: 40px;"></div>
+            <div class="parede" style="top: 150px; left: 350px; width: 80px;"></div>
+            <div class="parede" style="top: 200px; left: 50px; height: 80px;"></div>
+            <div class="parede" style="top: 250px; left: 200px; width: 100px;"></div>
+            <div class="parede" style="top: 300px; left: 350px; height: 60px;"></div>
+            <div class="parede" style="top: 350px; left: 150px; width: 180px;"></div>
+            <div class="parede" style="top: 400px; left: 50px;"></div>
+            <div id="saida"></div>
+        </div>
+
+        <!-- Terceira Fase -->
+        <div class="fase fase3" id="fase3">
+            <!-- Container para a terceira fase. -->
+            <div id="jogador"></div>
+            <div class="parede" style="top: 30px; left: 50px; width: 150px;"></div>
+            <div class="parede" style="top: 50px; left: 250px; height: 30px;"></div>
+            <div class="parede" style="top: 130px; left: 200px; height: 60px;"></div>
+            <div class="parede" style="top: 200px; left: 300px; width: 100px;"></div>
+            <div class="parede" style="top: 250px; left: 50px; width: 120px;"></div>
+            <div class="parede" style="top: 300px; left: 100px; height: 80px;"></div>
+            <div class="parede" style="top: 350px; left: 350px; width: 150px;"></div>
+            <div class="parede" style="top: 400px; left: 50px;"></div>
+            <div class="parede" style="top: 420px; left: 250px; height: 60px;"></div>
+            <div id="saida"></div>
+        </div>
+
+        <!-- Quarta Fase -->
+        <div class="fase fase4" id="fase4">
+            <!-- Container para a quarta fase, a última do jogo. -->
+            <div id="jogador"></div>
+            <div class="parede" style="top: 40px; left: 70px; width: 180px;"></div>
+            <div class="parede" style="top: 50px; left: 290px; height: 20px;"></div>
+            <div class="parede" style="top: 170px; left: 210px; height: 50px;"></div>
+            <div class="parede" style="top: 240px; left: 300px; width: 100px;"></div>
+            <div class="parede" style="top: 210px; left: 50px; width: 120px;"></div>
+            <div class="parede" style="top: 300px; left: 140px; height: 80px;"></div>
+            <div class="parede" style="top: 310px; left: 340px; width: 160px;"></div>
+            <div class="parede" style="top: 420px; left: 50px;"></div>
+            <div class="parede" style="top: 420px; left: 250px; height: 60px;"></div>
+            <div id="saida"></div>
+        </div>
+
+        <script src="script.js"></script>
+        <!-- Conecta o arquivo de script para implementar a lógica do jogo. -->
+
+    </body>
+</main>
+
+</html>

@@ -1,0 +1,152 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Configuração geral para as fases */
+.fase {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #000;
+    margin: 20px auto;
+    display: none; /* Apenas a fase ativa será exibida */
+    background-color: #fff; /* Fundo branco para destacar os elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Estilo do jogador */
+#jogador {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%; /* Forma circular */
+    transition: transform 0.2s ease; /* Transição suave para movimento */
+}
+
+/* Estilo da saída */
+#saida {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    top: 450px;
+    left: 450px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Destaque com brilho */
+}
+
+/* Estilo das paredes */
+.parede {
+    position: absolute;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Parede em fases diferentes */
+.fase1 .parede {
+    width: 100px;
+    height: 20px;
+}
+
+.fase2 .parede {
+    width: 80px;
+    height: 20px;
+}
+
+.fase3 .parede {
+    width: 60px;
+    height: 20px;
+}
+
+.fase4 .parede{
+width:  75px;
+height: 30px;
+}
+
+
+
+@keyframes moverDiagonal {
+    from {
+        top: 50px;
+        left: 50px;
+    }
+    to {
+        top: 300px;
+        left: 300px;
+    }
+}
+
+
+/* Mensagem de vitória */
+#mensagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    text-align: center;
+    display: none;
+}
+
+/* Botão para reiniciar */
+#reiniciar {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reiniciar:hover {
+    background-color: #555;
+}
+
+/* Adaptações para dispositivos menores */
+@media (max-width: 768px) {
+    .fase {
+        width: 90%;
+        height: 90%;
+    }
+
+    #saida {
+        width: 30px;
+        height: 30px;
+    }
+
+    #jogador {
+        width: 15px;
+        height: 15px;
+    }
+
+    .parede {
+        border-radius: 3px;
+    }
+
+    #mensagem {
+        font-size: 18px;
+    }
+}
